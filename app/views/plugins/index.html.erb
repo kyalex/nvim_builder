@@ -1,0 +1,20 @@
+<style>
+  code {
+    white-space: pre-wrap;
+  }
+</style>
+
+<h2>
+  Plugins
+</h2>
+
+<div>
+  <% @plugins.each do |plugin| %>
+    <hr />
+    <h4><%= plugin.plugin_name %></h4>
+    <p><%= plugin.description %></p>
+    <p><%= link_to 'Homepage', plugin.homepage %></p>
+    <code><%= render file: plugin.plugin_path, layout: false %></code>
+  <% end %>
+</div>
+
