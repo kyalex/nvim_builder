@@ -8,7 +8,11 @@ class BasePlugin
 
   class << self
     def plugin_path
-      Rails.root.join("app", "plugins", "#{name.underscore}.lua")
+      Rails.root.join("app", "plugins", "#{id}.lua")
+    end
+
+    def id
+      name.underscore
     end
   end
 end

@@ -15,6 +15,7 @@
     <p><%= plugin.description %></p>
     <p><%= link_to 'Homepage', plugin.homepage %></p>
     <code><%= render file: plugin.plugin_path, layout: false %></code>
+    <%= button_to 'Add', users_plugins_path(plugin.id), params: { plugin_id: plugin.id }, method: :post %>
   <% end %>
 </div>
 
