@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   resources :plugins do
     post :build, on: :collection
   end
+
+  namespace :users do
+    resources :plugins
+  end
 end
