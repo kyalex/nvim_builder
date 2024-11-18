@@ -1,5 +1,5 @@
 class PluginsController < ApplicationController
   def index
-    @plugins = BasePlugin.descendants
+    render Plugins::IndexView.new(plugins: BasePlugin.descendants)
   end
 end

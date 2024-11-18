@@ -27,3 +27,13 @@ group :development, :test do
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
 end
+
+gem "tailwindcss-rails", "~> 3.0"
+
+gem "phlex-rails", "~> 1.2"
+
+gem "phlex_ui", "~> 0.1.9"
+
+gem "ruby_ui", "~> 1.0.0.pre.alpha.4"
+
+gem "tailwind_merge", "~> 0.13.2"

@@ -1,6 +1,0 @@
-<% if current_user %>
-  Welcome <%= current_user.uid%>!
-  <%= button_to 'Sign Out', sign_out_path, method: :delete, data: { turbo: 'false' } %>
-<% else %>
-  <%= button_to 'Sign in with Github', '/auth/github', method: :post, data: { turbo: 'false' } %>
-<% end %>
