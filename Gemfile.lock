@@ -113,9 +113,6 @@ GEM
     irb (1.14.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    jbuilder (2.13.0)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     json (2.8.2)
     jwt (2.9.3)
       base64
@@ -368,7 +365,6 @@ DEPENDENCIES
   bootsnap
   brakeman
   importmap-rails
-  jbuilder
   kamal (>= 2.0.0.rc2)
   omniauth (~> 2.1.2)
   omniauth-github (~> 2.0.0)
