@@ -1,18 +1,18 @@
 source "https://rubygems.org"
 
-gem "importmap-rails"
+gem "importmap-rails", "~> 2.0.3"
 gem "omniauth", "~> 2.1.2"
 gem "omniauth-github", "~> 2.0.0"
 gem "omniauth-rails_csrf_protection", "~> 1.0.2"
 gem "phlex-rails", "~> 1.2"
 gem "phlex_ui", "~> 0.1.9"
-gem "propshaft"
+gem "propshaft", "~> 1.1.0"
 gem "puma", ">= 5.0"
 gem "rails", "~> 8.0.0.rc2"
 gem "ruby_ui", "~> 1.0.0.pre.alpha.4"
 gem "sqlite3", ">= 2.1"
-gem "stimulus-rails"
-gem "turbo-rails"
+gem "stimulus-rails", "~> 1.3.4"
+gem "turbo-rails", "~> 2.0.11"
 
 gem "tzinfo-data"
 
@@ -28,7 +28,7 @@ group :development, :test do
 
   gem "brakeman", require: false
 
-  gem "rubocop", require: false
-  gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
+  gem "rubocop", "~> 1.68.0", require: false
+  gem "rubocop-performance", "~> 1.23.0", require: false
+  gem "rubocop-rails", "~> 2.27.0", require: false
 end
