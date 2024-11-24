@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 
-gem "importmap-rails", "~> 2.0.3"
 gem "omniauth", "~> 2.1.2"
 gem "omniauth-github", "~> 2.0.0"
 gem "omniauth-rails_csrf_protection", "~> 1.0.2"
@@ -19,9 +18,6 @@ gem "tzinfo-data"
 gem "bootsnap", require: false
 gem "kamal", ">= 2.0.0.rc2", require: false
 gem "thruster", require: false
-
-gem "tailwindcss-rails", "~> 3.0"
-gem "tailwind_merge", "~> 0.13.2"
 
 group :development, :test do
   gem "annotate", "~> 3.2"

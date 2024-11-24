@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
   allow_browser versions: :modern
 
   helper_method :current_user

@@ -20,3 +20,15 @@ Style/Documentation:
 
 Style/ClassAndModuleChildren:
   Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - app/views/**/*
+
+Metrics/AbcSize:
+  Exclude:
+    - app/views/**/*
+
+Lint/MissingSuper:
+  Exclude:
+    - app/views/**/*
