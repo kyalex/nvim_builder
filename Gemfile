@@ -19,9 +19,6 @@ gem "bootsnap", require: false
 gem "kamal", ">= 2.0.0.rc2", require: false
 gem "thruster", require: false
 
-gem "tailwindcss-rails", "~> 3.0"
-gem "tailwind_merge", "~> 0.13.2"
-
 group :development, :test do
   gem "annotate", "~> 3.2"
 
