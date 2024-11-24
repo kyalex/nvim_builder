@@ -1,7 +1,15 @@
 {
   "type": "module",
   "dependencies": {
+    "@hotwired/turbo-rails": "^8.0.12",
     "rbui-js": "1.0.0-alpha.4",
     "tailwindcss-animate": "^1.0.7"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.css -o ./app/assets/builds/application.css --minify"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0"
   }
 }
