@@ -14,5 +14,9 @@ class BasePlugin
     def id
       name.underscore
     end
+
+    def find(id)
+      descendants.find { |plugin| plugin.id == id }
+    end
   end
 end
