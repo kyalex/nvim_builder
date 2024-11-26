@@ -1,17 +1,17 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const execSync = require('child_process').execSync;
+import defaultTheme from "tailwindcss/defaultTheme";
+import { execSync } from "child_process";
 
-const outputRBUI = execSync('bundle show phlex_ui', { encoding: 'utf-8' });
-const rbui_path = outputRBUI.trim() + '/**/*.rb';
+const outputRBUI = execSync("bundle show phlex_ui", { encoding: "utf-8" });
+const rbui_path = outputRBUI.trim() + "/**/*.rb";
 
 module.exports = {
   darkMode: ["class"],
   content: [
-    './public/*.html',
-    './app/helpers/**/*.rb',
-    './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim,rb}',
-    './app/assets/stylesheets/**/*.css',
+    "./public/*.html",
+    "./app/helpers/**/*.rb",
+    "./app/javascript/**/*.js",
+    "./app/views/**/*.{erb,haml,html,slim,rb}",
+    "./app/assets/stylesheets/**/*.css",
     rbui_path
   ],
   theme: {
@@ -67,19 +67,19 @@ module.exports = {
         },
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        serif: ["var(--font-serif)", ...defaultTheme.fontFamily.sans],
       },
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/container-queries'),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/container-queries"),
     require("tailwindcss-animate"),
   ]
 }

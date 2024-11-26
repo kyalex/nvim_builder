@@ -1,19 +1,19 @@
 class Plugins::IndexView < ApplicationView
-  def initialize(plugins:)
-    @plugins = plugins
-  end
+  accepts :plugins
 
   def view_template
-    div do
-      h1 { "Plugins" }
+    div(class: "grid grid-cols-2 gap-2") do
+      div do
+        plugins.each do |plugin|
+          h4 { plugin.plugin_name }
+          link_to "Details", plugin_path(plugin.id), data: { turbo_frame: "preview" }
+        end
+      end
 
-      @plugins.each do |plugin|
-        hr
-        h4 { plugin.plugin_name }
-        p { plugin.description }
-        p { link_to "Homepage", plugin.homepage }
-        code { render file: plugin.plugin_path, layout: false }
-        button_to "Add", users_plugins_path(plugin.id), params: { plugin_id: plugin.id }, method: :post
+      div do
+        turbo_frame_tag("preview") do
+          p { "Select an item to see the preview" }
+        end
       end
     end
   end

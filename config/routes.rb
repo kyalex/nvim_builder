@@ -6,11 +6,5 @@ Rails.application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create", via: %i[get post]
   delete "/sign_out" => "sessions#destroy"
 
-  resources :plugins do
-    post :build, on: :collection
-  end
-
-  namespace :users do
-    resources :plugins
-  end
+  resources :plugins
 end
