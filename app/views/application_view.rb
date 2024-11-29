@@ -5,15 +5,18 @@ class ApplicationView < ApplicationComponent
   include Phlex::Rails::Helpers::ButtonTo
   include Phlex::Rails::Helpers::TurboFrameTag
 
+  class_attribute :attributes, default: []
+
   def self.accepts(*attributes)
-    define_method(:initialize) do |**args|
-      attributes.each do |attr|
-        raise ArgumentError, "Missing keyword: #{attr}" unless args.key?(attr)
+    self.attributes += Array.wrap(attributes)
+    attr_reader(*self.attributes)
+  end
 
-        instance_variable_set(:"@#{attr}", args[attr])
-      end
+  def initialize(**args)
+    self.class.attributes.each do |attr|
+      raise ArgumentError, "Missing keyword: #{attr}" unless args.key?(attr)
+
+      instance_variable_set(:"@#{attr}", args[attr])
     end
-
-    attr_reader(*attributes)
   end
 end

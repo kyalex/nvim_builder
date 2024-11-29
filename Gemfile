@@ -11,6 +11,7 @@ gem "rails", "~> 8.0.0.rc2"
 gem "ruby_ui", "~> 1.0.0.pre.alpha.4"
 gem "sqlite3", ">= 2.1"
 gem "stimulus-rails", "~> 1.3.4"
+gem "tailwindcss-rails", "3.0.0"
 gem "turbo-rails", "~> 2.0.11"
 
 gem "tzinfo-data"
